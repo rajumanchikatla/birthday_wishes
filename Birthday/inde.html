@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Birthday Quiz</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .quiz-container {
+            text-align: center;
+        }
+        #question {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .answer-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+        .answer-button:hover {
+            background-color: #0056b3;
+        }
+        #wishes {
+            margin-top: 20px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="question">What is capital of telangana?</div>
+        <button class="answer-button" onclick="checkAnswer('Hyd')">Hyderabad</button>
+        <button class="answer-button" onclick="checkAnswer('London')">Warangal</button>
+        <button class="answer-button" onclick="checkAnswer('Berlin')">Vizag</button>
+        <div id="wishes">
+            <h1>Happy Birthday Kalyanee!</h1>
+            <b><p>Wishing you a day filled with joy and wonderful surprises. 🎉🎂</p></b>
+        </div>
+    </div>
+    <script>
+        const questionElement = document.getElementById('question');
+        const wishes = document.getElementById('wishes');
+
+        function checkAnswer(answer) {
+            if (answer === 'Hyd') {
+                questionElement.style.display = 'none';
+                wishes.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
